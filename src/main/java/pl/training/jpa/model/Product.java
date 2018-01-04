@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 
 /**
@@ -14,7 +15,8 @@ import javax.persistence.Entity;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Product {
+@Cacheable
+public class Product extends AbstractEntity {
   private String name;
   private String category;
   private int price;

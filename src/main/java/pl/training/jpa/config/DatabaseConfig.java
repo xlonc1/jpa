@@ -32,7 +32,7 @@ public class DatabaseConfig {
   public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
     LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
     em.setDataSource(db());
-    em.setPackagesToScan("com.training.jpa.model");
+    em.setPackagesToScan("pl.training.jpa");
     em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
     em.setJpaProperties(additionalProperties());
 
